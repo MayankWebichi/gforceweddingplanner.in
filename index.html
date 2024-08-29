@@ -2109,6 +2109,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+      
     </style>
 
     <div class="header__toggle d-md-none ml-auto">
@@ -2199,74 +2200,175 @@
       }
     </style>
   </header>
-  <section class="hero scrollReveal fadeShow">
-    <div class="hero-roller">
-      <!-- Slide 1 -->
-      <div class="hero-slide d-flex align-items-center"
-        style="background-image: url('wp-content/uploads/2022/08/Web-Banner-20.jpg'); position: relative;">
-        <div
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);">
-        </div>
-        <div class="container" style="position: relative; z-index: 2;">
-          <div class="hero-caption">
-            <h2 class="scrollReveal fadeSlide fadeShow"
-              style="color: #FFD700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Endless love, memories to
-              treasure <br></h2>
-            <p class="scrollReveal fadeSlide fadeUp" style="color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
-              Transform your wedding into a treasured memory with us. </p>
-
-
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Slide 2 -->
-      <div class="hero-slide d-flex align-items-center"
-        style="background-image: url('wp-content/uploads/2022/06/Untitled\ design.png'); position: relative;">
-        <div
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);">
-        </div>
-        <div class="container" style="position: relative; z-index: 2;">
-          <div class="hero-caption">
-            <h2 class="scrollReveal fadeSlide fadeShow"
-              style="color: #FFD700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">We Make Your Wedding Special</h2>
-            <p class="scrollReveal fadeSlide fadeUp" style="color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
-              Design your perfect wedding with our custom packages, ensuring a seamless and unforgettable celebration.
-            </p>
-
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Slide 3 with overlay and text enhancements -->
-      <div class="hero-slide d-flex align-items-center"
-        style="background-image: url('wp-content/uploads/2022/08/Web-Banner-21.jpg'); position: relative; background-size: cover;">
-        <!-- Semi-transparent overlay -->
-        <div
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);">
+<section class="home-slider">
+    <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slide" style="background-image: url('wp-content/uploads/2022/08/Web-Banner-20.jpg');">
+            <div class="overlay"></div>
+            <div class="content">
+                <h2></h2>
+                <p></p>
+            </div>
         </div>
 
-        <div class="container" style="position: relative; z-index: 2;">
-          <div class="hero-caption">
-            <h2 class="scrollReveal fadeSlide fadeShow"
-              style="color: #FFD700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
-              Enhance your Wedding with us <br>
-            </h2>
-            <p class="scrollReveal fadeSlide fadeUp" style="color: white; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
-              Create your dream wedding effortlessly with tailored packages, ensuring every detail is flawless and
-              unforgettable
-            </p>
-
-            </a>
-          </div>
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('wp-content/uploads/2022/08/Web-Banner-21.jpg');">
+            <div class="overlay"></div>
+            <div class="content">
+                <h2></h2>
+                <p></p>
+            </div>
         </div>
-      </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" style="background-image: url('wp-content/uploads/2022/06/Untitled\ design.png');">
+            <div class="overlay"></div>
+            <div class="content">
+                <h2></h2>
+                <p>.</p>
+            </div>
+        </div>
     </div>
-  </section>
+
+    <!-- Navigation Dots -->
+    <div class="slider-nav">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+<style>.home-slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100vh; /* Changed to full viewport height */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    padding: 0 15px;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.content p {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .content h2 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .slide {
+        height: 100vh; /* Ensure it fills the viewport height */
+    }
+}
+
+@media (max-width: 480px) {
+    .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+}
+
+</style><script>
+  const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+
+function showSlide(index) {
+    if (index >= slides.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slides.length - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    const offset = -currentIndex * 100;
+    document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showSlide(index));
+});
+
+// Automatically change slides every 5 seconds
+setInterval(() => {
+    showSlide(currentIndex + 1);
+}, 5000);
+
+</script>
+
 
   <section class="section section__about">
     <div class="container">
